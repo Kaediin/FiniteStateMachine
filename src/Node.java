@@ -1,11 +1,10 @@
-package model;
+import java.util.List;
 
 public class Node {
 
     // Node values
     private String name;
-    private Node nodeA;
-    private Node nodeB;
+    private List<Node> accessibleNodes;
 
     /**
      * Constructor with name attribute
@@ -21,13 +20,6 @@ public class Node {
         return name;
     }
 
-    public Node getNodeA() {
-        return nodeA;
-    }
-
-    public Node getNodeB() {
-        return nodeB;
-    }
 
     // Setters
 
@@ -36,16 +28,11 @@ public class Node {
         this.name = name;
     }
 
-    public void setNodes(Node nodeA, Node nodeB){
-        setNodeA(nodeA);
-        setNodeB(nodeB);
+    public List<Node> getAccessibleNodes() {
+        return accessibleNodes;
     }
 
-    public void setNodeA(Node nodeA) {
-        this.nodeA = nodeA;
-    }
-
-    public void setNodeB(Node nodeB) {
-        this.nodeB = nodeB;
+    public void setAccessibleNodes(List<Node> accessibleNodes) {
+        this.accessibleNodes = accessibleNodes;
     }
 }
